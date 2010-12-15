@@ -5,6 +5,8 @@
 	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.4/jquery.min.js"></script>
 	<script type="text/javascript" src="http://github.com/DmitryBaranovskiy/raphael/raw/master/raphael.js"></script>
 	<script type="text/javascript" src="http://github.com/renatoalbano/raphael-gauge/raw/master/lib/raphael.gauge.js"></script>
+	<script type="text/javascript" src="highlight.pack.js"></script>
+	<link href='highlight.default.css' rel='stylesheet' type='text/css'>
 	<link href='http://fonts.googleapis.com/css?family=Droid+Sans+Mono:regular,bold,italic' rel='stylesheet' type='text/css'>
 	<link href='http://fonts.googleapis.com/css?family=Josefin+Sans' rel='stylesheet' type='text/css'>
 	<link href='style.css' rel='stylesheet' type='text/css'>
@@ -32,6 +34,7 @@
     }, 1500);
 
 	});
+	hljs.initHighlightingOnLoad();
 	</script>
 	<title>Gauge Raphaël Plugin</title>
 </head>
@@ -96,7 +99,6 @@ setInterval(function(){
 	g2.move(percent);
 }, 1500);
 	</code></pre>
-	<script type="text/javascript" src="http://raphaeljs.com/syntax.js"></script>
 
 	<h2>About Raphaël</h2>
 	<p><a href="http://raphaeljs.com/">http://raphaeljs.com/</a></p>
