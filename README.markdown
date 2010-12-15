@@ -1,10 +1,13 @@
 # Gauge Raphaël Plugin
 
+## Samples:
+[http://renatoalbano.github.com/raphael-gauge/](http://renatoalbano.github.com/raphael-gauge/)
+
 ## Usage:
     // Creates 320 × 320 px raphael canvas
     var r = Raphael("holder", 320, 320);
 
-    // Create a 320 x 320 px gauge with 0 min angle and 360 max angle
+    // Create a gauge with 0 min angle and 360 max angle
     var g = r.gauge(0, 360);
 
     // Attach Background to gauge with x=140 and y=140 center point
@@ -20,5 +23,5 @@
     }, 2000);
 
 ## License:
-http://www.opensource.org/licenses/mit-license.php
+[http://www.opensource.org/licenses/mit-license.php](http://www.opensource.org/licenses/mit-license.php)
 
