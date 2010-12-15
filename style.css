@@ -1,0 +1,43 @@
+html, body, h1, h2, h3, pre {
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	background-color: #2B45D9;
+	color: #1F1F1F;
+	font-family: Verdana, Helvetica, sans-serif;
+	font-size: 12px;
+}
+
+h1, h2, h3 {
+	font-family: 'Josefin Sans', Arial, Verdana, Helvetica, sans-serif;
+	color: #4F158A;
+	font-weight: normal;
+	padding: 40px 0 0 0;
+	margin: 0 20px;
+}
+
+p { margin: 0 20px; padding: 10px 0; }
+a { color: #467527; }
+
+h1 { font-size: 42px; }
+h2 { font-size: 36px; }
+h3 { font-size: 24px; margin-top: 20px; border-top: 1px solid #4F158A; }
+
+#wrapper {
+	width: 780px;
+	margin: 0 auto;
+	background-color: #D8DDE3;
+}
+
+#holder1, #holder2 { padding: 40px; }
+
+/* from http://raphaeljs.com/ code */
+pre { color: #fff; background-color: #1F1F1F; width: 600px; overflow: auto; padding-left: 20px; }
+pre code { font-family: 'Droid Sans Mono', monospace; font-size: 12px; }
+pre.javascript code b { color: #e9df8f; font-weight: normal }
+pre.javascript code i,pre.javascript code i *,pre.javascript code i .d { color: #8b9967; font-style: normal }
+pre.javascript code .s { color: #e7be61 }
+pre.javascript code .d { color: #cf6a4c }
+pre.javascript code .c,pre.javascript code .c * { color: #666 }

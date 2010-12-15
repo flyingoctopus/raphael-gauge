@@ -2,9 +2,104 @@
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
 <head>
 	<meta http-equiv="Content-Type" content="text/html;charset=UTF-8" />
+	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.4/jquery.min.js"></script>
+	<script type="text/javascript" src="http://github.com/DmitryBaranovskiy/raphael/raw/master/raphael.js"></script>
+	<script type="text/javascript" src="http://github.com/renatoalbano/raphael-gauge/raw/master/lib/raphael.gauge.js"></script>
+	<link href='http://fonts.googleapis.com/css?family=Droid+Sans+Mono:regular,bold,italic' rel='stylesheet' type='text/css'>
+	<link href='http://fonts.googleapis.com/css?family=Josefin+Sans' rel='stylesheet' type='text/css'>
+	<link href='style.css' rel='stylesheet' type='text/css'>
+	<script type="text/javascript">
+	$(function(){
+
+		var r = Raphael("holder1", 320, 320);
+		var g = r.gauge(0, 360);
+		g.bg(r.circle(140, 140, 140).attr({fill:"#ccc"}), [140, 140]);
+		g.pointer(r.rect(0, 0, 140, 10).attr({fill: "#000"}), [140, 5]);
+		setInterval(function(){
+			var percent = Math.floor(Math.random()*100);
+			g.move(percent);
+		}, 2000);
+
+    var r2 = Raphael("holder2", 200, 134);
+    var g2 = r2.gauge(17, 163);
+    g2.bg(r2.image("gauge-bg.png", 0, 0, 200, 134), [100, 94])
+    g2.pointer(r2.image("gauge-pointer.png", 0, 0, 84, 27), [67, 13]);
+    g2.move(50, false);
+    setInterval(function(){
+      var percent = Math.floor(Math.random()*100);
+      $('#copy2').html(percent);
+      g2.move(percent);
+    }, 1500);
+
+	});
+	</script>
 	<title>Gauge Raphaël Plugin</title>
 </head>
 <body>
-	
+	<div id="wrapper">
+	<h1>Gauge Raphaël Plugin</h1>
+
+	<h2>Last Version</h2>
+	<p>Version: 1.0 (Jul 06 2010)<br /><a href="https://github.com/renatoalbano/raphael-gauge/raw/master/lib/raphael.gauge.js">raw source</a></p>
+
+	<h2>Author</h2>
+	<p>Renato Albano<br /><a href="http://github.com/renatoalbano">http://github.com/renatoalbano</a><br /><a href="http://renatoalbano.com">http://renatoalbano.com</a></p>
+
+	<h2>License</h2>
+	<p>Licensed under the MIT license<br /><a href="http://www.opensource.org/licenses/mit-license.php">http://www.opensource.org/licenses/mit-license.php</a></p>
+
+	<h2>Samples</h2>
+
+	<h3>Sample 1</h3>
+	<div id="holder1"></div>
+	<pre class="javascript code"><code>
+// Creates 320 × 320 px raphael canvas
+var r = Raphael("holder", 320, 320);
+
+// Create a gauge with 0 min angle and 360 max angle
+var g = r.gauge(0, 360);
+
+// Attach Background to gauge with x=140 and y=140 center point
+g.bg(r.circle(140, 140, 140).attr({fill:"#ccc"}), [140, 140]);
+
+// Attach Pointer to gauge with x=140 and y=5 center point
+g.pointer(r.rect(0, 0, 140, 10).attr({fill: "#000"}), [140, 5]);
+
+// Move pointer with random value
+setInterval(function(){
+	var percent = Math.floor(Math.random()*100);
+	g.move(percent);
+}, 2000);
+	</code></pre>
+
+	<h3>Sample 2</h3>
+	<div id="holder2"></div>
+	<pre class="javascript code"><code>
+// Creates 200 × 134 px raphael canvas
+var r2 = Raphael("holder2", 200, 134);
+
+// Create a gauge with 17 min angle and 163 max angle
+var g2 = r2.gauge(17, 163);
+
+// Attach Background to gauge with x=100 and y=94 center point
+g2.bg(r2.image("gauge-bg.png", 0, 0, 200, 134), [100, 94])
+
+// Attach Pointer to gauge with x=67 and y=13 center point
+g2.pointer(r2.image("gauge-pointer.png", 0, 0, 84, 27), [67, 13]);
+
+// Move pointer to 50% without animation
+g2.move(50, false);
+
+// Move pointer with random value
+setInterval(function(){
+	var percent = Math.floor(Math.random()*100);
+	g2.move(percent);
+}, 1500);
+	</code></pre>
+	<script type="text/javascript" src="http://raphaeljs.com/syntax.js"></script>
+
+	<h2>About Raphaël</h2>
+	<p><a href="http://raphaeljs.com/">http://raphaeljs.com/</a></p>
+	</div>
 </body>
 </html>
