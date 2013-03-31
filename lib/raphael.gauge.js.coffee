@@ -1,7 +1,9 @@
 # Raphaël Gauge 
 # * Author: Renato Albano (renatoalbano.com) ~ http://github.com/renatoalbano 
+# * Author: Vincent van Haaff (flyingoctopus.net) ~ http://github.com/flyingoctopus 
 # * Licensed under the MIT (http://www.opensource.org/licenses/mit-license.php) license.
 # * Version: 1.1 (Mar 13 2012)
+# * Version: 1.1.1a (Mar 30 2013)
 # 
 ((Raphael) ->
   Raphael.fn.gauge = (minAngle, maxAngle) ->
